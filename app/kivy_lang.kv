@@ -1,2 +1,79 @@
-<FloatBuild>:
-    
+<SwitchScreens>:
+    MainScreen:
+        name:'mainscreen'
+    SignUpScreen:
+        name:'signup'
+    LoginScreen:
+        name:'login'
+
+
+
+<MainScreen>:
+    MDBoxLayout:
+        orientation:'vertical'
+        MDToolbar:
+            title:'Main Screen'
+        MDBoxLayout:
+            orientation:'vertical'
+            MDCard:
+                orientation:'vertical'
+                MDLabel:
+                    text:'IntroScreen'
+                    font_size:dp(40)
+                    adaptive_height:True
+                MDSeparator:
+                    height:dp(2)
+                MDFloatLayout:
+                    MDFillRoundFlatButton:
+                        text:'SignUp Screen'
+                        pos_hint:{'center_x':.7,'center_y':.5}
+                        on_release:
+                            root.manager.current='signup'
+                    MDFillRoundFlatButton:
+                        text:'Login Screen'
+                        pos_hint:{'center_x':.3,'center_y':.5}
+                        on_release: 
+                            root.manager.current='login'
+            
+<SignUpScreen>:
+    MDBoxLayout:
+        orientation:'vertical'
+        MDToolbar:
+            title:'SignUp Screen'
+        MDBoxLayout:
+            orientation:'vertical'
+            MDCard:
+                orientation:'vertical'
+                MDLabel:
+                    text:'SignUp Screen'
+                    font_size:dp(40)
+                    adaptive_height:True
+                MDSeparator:
+                    height:dp(2)
+                MDFloatLayout:
+                    MDFillRoundFlatButton:
+                        text:'Main Screen'
+                        pos_hint:{'center_x':.5,'center_y':.5}
+                        on_release:
+                            root.manager.current='mainscreen'
+<LoginScreen>:
+    MDBoxLayout:
+        orientation:'vertical'
+        MDToolbar:
+            title:'Login Screen'
+        MDBoxLayout:
+            orientation:'vertical'
+            MDCard:
+                orientation:'vertical'
+                MDLabel:
+                    text:'Login Screen'
+                    font_size:dp(40)
+                    adaptive_height:True
+                MDSeparator:
+                    height:dp(2)
+                MDFloatLayout:
+                    MDFillRoundFlatButton:
+                        text:'Main Screen'
+                        pos_hint:{'center_x':.5,'center_y':.5}
+                        on_release:
+                            root.manager.current='mainscreen'
